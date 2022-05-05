@@ -50,8 +50,8 @@ points(set, pch = 21, bg = ifelse(set[, 3] == 1, 'green4', 'red3'))
 
 # Visualizando os resultados no conjunto de teste
 set = test_set
-X1 = seq(min(set[, 1]) - 1, max(set[, 1]) + 1, by = 0.02)
-X2 = seq(min(set[, 2]) - 1, max(set[, 2]) + 1, by = 0.02)
+X1 = seq(min(set[, 1]) - 1, max(set[, 1]) + 1, by = 0.03)
+X2 = seq(min(set[, 2]) - 1, max(set[, 2]) + 1, by = 0.03)
 grid_set = expand.grid(X1, X2)
 colnames(grid_set) = c('Age', 'EstimatedSalary')
 prob_set = predict(classifier, type = 'response', newdata = grid_set)
